@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title','Translations for Term "'. $term_word . '"');
+@section('title','Translations for Term "'. $term_word . '"')
 @section('content')
 <div class="row">
     <div class="col-md-12 col-sm-12 col-xs-12">
