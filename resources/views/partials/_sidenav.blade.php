@@ -27,7 +27,7 @@
                 <ul class="nav side-menu">
                     <li><a href="{{route('glossary.create')}}"><i class="fa fa-home"></i> New Glossary</a>
                     </li>
-                    <li><a href="{{route('glossary.index')}}"><i class="fa fa-home"></i> Glossary list</a>
+                    <li><a href="{{route('glossaries.index')}}"><i class="fa fa-home"></i> Glossary list</a>
                     </li>
                 </ul>
             </div>

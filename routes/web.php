@@ -17,6 +17,7 @@ Route::get('/', function () {
     return redirect(route('dashboard'));
 });
 
+Route::get("/glossaries", "GlossaryController@showListGlossaries")->name("glossaries.index");
 Route::resource('glossary', 'GlossaryController');
 
 Route::get("/term/{glossary_id}", "TermController@index")->name("term.index");

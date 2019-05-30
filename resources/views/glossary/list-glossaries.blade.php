@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('title','Glossaries')
 @section('content')
-<div class="row">
+<div class="row" id="glossary-vue">
     <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="x_panel">
             <div class="x_content">
@@ -18,12 +18,12 @@
                               </tr> 
                             </thead>
                             <tbody>
-                              @foreach ($glossaries as $glossary)
-                              <tr class="pointer">
-                                <td>{{$glossary['name']}}</td>
-                                <td><a href={{route("term.index",$glossary["id"])}} class="btn btn-default btn-sm">View Terms</a></td>
+
+                              <tr v-for="glossary in glossaries" class="pointer">
+                                <td>@{{ glossary.name }}</td>
+                                <td><a class="btn btn-default btn-sm">@{{ glossary.id }}</a></td>
                               </tr>
-                              @endforeach
+
                             </tbody>
                         </table>
                     </div>

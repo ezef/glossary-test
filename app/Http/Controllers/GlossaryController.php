@@ -17,10 +17,16 @@ class GlossaryController extends Controller
     {
         $this->middleware('auth');
     }
+
+    public function showListGlossaries()
+    {
+        return view("glossary/list-glossaries");
+    }
+
     public function index()
     {
         $glossaries = Glossary::all()->toArray();
-        return view("glossary/list-glossaries")->with("glossaries", $glossaries);
+        return response()->json($glossaries);
 
     }
 
