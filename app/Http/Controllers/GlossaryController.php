@@ -58,7 +58,7 @@ class GlossaryController extends Controller
                 $glossary->addTerm($term);
             }
         }
-        return redirect()->route("glossary.index");
+        return redirect()->route("glossaries.index");
     }
 
 /**

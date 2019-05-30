@@ -11,5 +11,7 @@
     <!-- App Css -->
     <link href="{{asset('css/app.css')}}" rel="stylesheet">
     @stack('header-scripts')
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/1.5.1/vue-resource.js"></script>
 
 </head>

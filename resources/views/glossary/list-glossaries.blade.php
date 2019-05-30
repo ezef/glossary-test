@@ -100,4 +100,26 @@
        </div>
     </div>
 </form>
+
+<script>
+const glossaryVue = new Vue({
+    el: '#glossary-vue',
+    data: {
+        glossaries: [],
+        formErrors: {},
+        formErrorsUpdate: {},
+
+    },
+    mounted: function() {
+        this.getGlossaries();
+    },
+    methods: {
+        getGlossaries: function() {
+            this.$http.get('/glossary').then((response) => {
+                this.glossaries = response.body;
+            });
+        },
+    }
+});
+</script>
 @endsection
