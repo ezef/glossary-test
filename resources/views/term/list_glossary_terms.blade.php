@@ -8,7 +8,7 @@
                 <div class="row form-group">
                   <div class="form-group clearfix">
                         <a href={{route("term.create",$glossary_id)}} class="btn btn-info btn-md">Add Term</a>
-                        <a href={{route("glossary.index")}} class="btn btn-info btn-md pull-right">Go Back</a>
+                        <a href={{route("glossaries.index")}} class="btn btn-info btn-md pull-right">Go Back</a>
                       </div>
                     <div class="table-responsive col-sm-12">
                         <table id="glossaries" class="table table-striped jambo_table">
