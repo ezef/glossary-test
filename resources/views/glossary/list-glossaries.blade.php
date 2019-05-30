@@ -21,7 +21,7 @@
 
                               <tr v-for="glossary in glossaries" class="pointer">
                                 <td>@{{ glossary.name }}</td>
-                                <td><a class="btn btn-default btn-sm">@{{ glossary.id }}</a></td>
+                                <td><button class="btn btn-default btn-sm" v-on:click="showTerms(glossary)">View Terms</button></td>
                               </tr>
 
                             </tbody>
@@ -118,6 +118,10 @@ const glossaryVue = new Vue({
             this.$http.get('/glossary').then((response) => {
                 this.glossaries = response.body;
             });
+        },
+        showTerms: function(glossary) {
+          console.log(glossary.name)
+          window.location.href = "term/"+glossary.id;
         },
     }
 });
