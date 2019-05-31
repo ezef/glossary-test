@@ -18,7 +18,8 @@ Route::get('/', function () {
 });
 
 Route::get("/glossaries", "GlossaryController@showListGlossaries")->name("glossaries.index");
-Route::resource('glossary', 'GlossaryController');
+//Route::post("/glossary", "GlossaryController@store")->name("glossary.store");
+Route::resource('glossary', 'GlossaryController')->middleware('web');
 
 Route::get("/term/{glossary_id}", "TermController@index")->name("term.index");
 Route::get("/term/{glossary_id}/create", "TermController@create")->name("term.create");
@@ -36,12 +37,7 @@ Route::get("/translation/{translation_id}/destroy", "TranslationController@destr
 
 // Route::resource('term', 'TermController');
 
-Route::group(['middleware' => 'auth'], function () {
-    /*
-    |--------------------------------------------------------------------------
-    | Dashboard
-    |--------------------------------------------------------------------------
-     */
-    Route::get('dashboard', 'HomeController@index')->name('dashboard');
-
-});
+//Route::group(['middleware' => 'auth'], function () {
+//    Route::get('dashboard', 'HomeController@index')->name('dashboard');
+//
+//});

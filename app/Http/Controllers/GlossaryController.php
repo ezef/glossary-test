@@ -13,10 +13,6 @@ class GlossaryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
 
     public function showListGlossaries()
     {
@@ -48,6 +44,7 @@ class GlossaryController extends Controller
  */
     public function store(Request $request)
     {
+        return response()->json("sarpedia");
         $glossary = Glossary::create([
             "name"     => $request->input("name"),
             "language" => $request->input("lang"),
